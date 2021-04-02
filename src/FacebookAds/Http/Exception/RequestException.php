@@ -118,9 +118,7 @@ class RequestException extends Exception {
       return null;
     }
 
-    return array_key_exists($key, $array)
-      ? $array[$key]
-      : $default;
+    return $array[$key] ?? $default;
   }
 
   /**
